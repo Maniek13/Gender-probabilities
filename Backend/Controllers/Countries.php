@@ -5,7 +5,7 @@ class Countries implements ICountries{
     protected array $list;
 
     function get_all() : array{
-        $url = "https://restcountries.eu/rest/v2/all?fields=name;alpha2Code";
+        $url = "https://restcountries.eu/rest/v2/region/europe?fields=name;alpha2Code";
 
         $curlSession = curl_init();
         curl_setopt($curlSession, CURLOPT_URL, $url);
