@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<script type="module" src="Fronted/js/main.js"></script>
+
+<body>
+    <p id="gender">See gender probabilities based on name and country</p>
+    <input id="name"></input>
+    <select id="countries"></select>
+    <button id="go" onClick="go()">Calculate gender</button>
+</body>
+
+<script type="module">
+    countries();
+
+    var input = document.getElementById("name");
+
+    input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("go").click();
+        }
+    });
+</script>
