@@ -1,4 +1,4 @@
-import { XML, php } from './modules/ajax.js'
+import { XML, php } from './Modules/Ajax.js'
 
 window.countries = async function countries(){
 	let params = 'function=countries';
