@@ -4,8 +4,8 @@ require_once('Interfaces/ICountries.php');
 class Countries implements ICountries{
     protected array $list;
 
-    function get_all() : array{
-        $url = "https://restcountries.eu/rest/v2/region/europe?fields=name;alpha2Code";
+    function get_all_from(string $region) : array{
+        $url = "https://restcountries.eu/rest/v2/region/".$region."?fields=name;alpha2Code";
 
         $curlSession = curl_init();
         curl_setopt($curlSession, CURLOPT_URL, $url);

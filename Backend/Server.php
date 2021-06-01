@@ -7,7 +7,7 @@ $case = $_GET['function'];
 switch ($case) {
     case "countries":
         $countries = new Countries();
-        $countries = $countries->get_all();
+        $countries = $countries->get_all_from("europe");
         echo(json_encode($countries));
     break;
     case "gender":
