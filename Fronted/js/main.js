@@ -32,6 +32,6 @@ window.go = async function go(){
 
 	let gender = await php(params);
 
-	document.getElementById("gender").innerText = gender.gender == "undefined" || gender.gender ==  null ? "Gender is undefined for " + temp + " in " + countries.options[countries.selectedIndex].text : temp + " is " + gender.probability + " " + gender.gender +  " in " + countries.options[countries.selectedIndex].text;
+	document.getElementById("gender").innerText = gender.gender == "undefined" || gender.gender ==  null ? "Gender is undefined for " + temp + " in " + countries.options[countries.selectedIndex].text : temp + " is " + gender.probability + "% " + gender.gender +  " in " + countries.options[countries.selectedIndex].text;
 	name.value = "";
 }
